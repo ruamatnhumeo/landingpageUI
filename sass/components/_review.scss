@@ -1,0 +1,90 @@
+.review {
+  > .container {
+    padding-bottom: 4rem;
+  }
+
+  &__title {
+    margin: 0 0 6.5rem 0;
+    @include slogan(2.8rem, 3.5rem);
+  }
+
+  .carousel {
+    &__container {
+      height: 275px;
+      width: 335px;
+      overflow: hidden;
+      padding-top: 36px;
+    }
+    &__track {
+      position: relative;
+      height: 100%;
+
+      transition: transform 0.2s ease;
+    }
+    &__slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      height: 100%;
+      width: 100%;
+      background-color: $color-neutral-gray;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: $font-weight-bold;
+      color: $color-primary-blue;
+    }
+    &__desc {
+      @extend %desc;
+    }
+    &__img {
+      transform: translateY(-50%);
+      width: 7rem;
+    }
+    &__nav {
+      margin: 2.2rem;
+    }
+    &__indicator {
+      height: 0.8rem;
+      width: 0.8rem;
+      margin: 0 1.5px;
+
+      border: 0.5px solid $color-primary-red;
+      border-radius: 50%;
+      background-color: transparent;
+
+      &--active {
+        background-color: $color-primary-red;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding-top: 15.5rem;
+    padding-bottom: 17rem;
+    .container {
+      margin: 0;
+      padding: 0;
+      display: block;
+    }
+    .carousel {
+      margin-bottom: 3.5rem;
+      &__container {
+        width: 100%;
+      }
+      &__track {
+        display: flex;
+      }
+      &__slide {
+        position: unset;
+        margin-right: 1rem;
+      }
+      &__nav {
+        display: none;
+      }
+    }
+  }
+}

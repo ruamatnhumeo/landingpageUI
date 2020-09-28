@@ -1,0 +1,41 @@
+.simplify-work {
+  background-color: $color-primary-red;
+  background-image: url("../images/bg-simplify-section-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  > .container {
+    padding-top: 0;
+  }
+
+  &__hero {
+    height: 40rem;
+    width: 100%;
+    padding: 0 3.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__slogan {
+    @include slogan(32px, 3.5rem);
+    color: $bg-color-primary;
+  }
+  &__btn {
+    margin-top: 3.2rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    background-size: contain;
+    &__hero {
+      height: 20rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__slogan {
+      width: 40rem;
+      text-align: left;
+    }
+  }
+}

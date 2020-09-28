@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: $font-size;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+  font-weight: $font-weight-regular;
+  color: $color-root;
+  background-color: $bg-color-primary;
+}
+
+main {
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.wrapper {
+  max-width: 153rem;
+  margin: 0 auto;
+  @media only screen and (min-width: 1200px) {
+    background: url(../images/bg-tablet-pattern.svg) bottom 202rem left 60rem,
+      url(../images/bg-tablet-pattern.svg) top 60rem right 100rem;
+    // background-image: url(../images/bg-simplify-section-desktop.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+}
+
+.container {
+  margin: 0 2.3rem;
+  padding: 10rem 0 0;
+  text-align: center;
+
+  @media only screen and (min-width: 1200px) {
+    display: flex;
+    margin: 0 16rem;
+    padding: 0;
+  }
+}
+
+.btn {
+  @include btn($color-primary-red, $bg-color-primary);
+  max-width: 160px;
+
+  &-white {
+    @include btn($bg-color-primary, $color-primary-red);
+    max-width: 160px;
+  }
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,85 @@
+header {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  z-index: 1000;
+
+  > .container {
+    padding: 0;
+  }
+
+  .nav {
+    width: 100%;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__hamburger-toogle {
+      position: relative;
+      > input {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .toogle {
+          background-image: url("../images/icon-close.svg");
+        }
+        &:checked ~ .menu {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+      > .toogle {
+        height: 25px;
+        width: 25px;
+        background-image: url("../images/icon-hamburger.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      > .menu {
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+    }
+
+    &__list {
+      display: none;
+      &__content {
+        display: flex;
+      }
+    }
+    &__link {
+      font-size: $font-size + 2;
+      font-weight: $font-weight-bold;
+      padding-right: 3rem;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &__button {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .nav {
+      &__list {
+        display: block;
+      }
+      &__button {
+        display: block;
+      }
+      &__hamburger-toogle {
+        display: none;
+      }
+    }
+  }
+}

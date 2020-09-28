@@ -1,0 +1,10 @@
+.overlay {
+  position: fixed;
+  top: 6.5rem;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  z-index: 800;
+  background: linear-gradient(#c5bcbc00, #353535f5);
+}

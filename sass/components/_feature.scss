@@ -1,0 +1,58 @@
+.feature {
+  @include bg-pattern(); // -25 -20
+  background: url("../images/bg-simplify-section-mobile.svg");
+  &__slogan {
+    @include slogan(2.8rem, 3.5rem);
+  }
+  &__desc {
+    @extend %desc;
+  }
+  &__list {
+    text-align: left;
+    @extend %desc;
+    padding-top: 1rem;
+    padding: 0;
+  }
+  &__item {
+    margin-top: 5rem;
+
+    > h3 {
+      margin-bottom: 2rem;
+      padding: 1rem 0;
+      color: $color-primary-blue;
+
+      background-color: $color-red-light;
+      border-radius: 90px;
+
+      > span {
+        padding: 1rem 2.4rem;
+        margin-right: 15px;
+        color: $bg-color-primary;
+        background-color: $color-primary-red;
+        border-radius: 90px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    &__header {
+      text-align: left;
+      padding-top: 5rem;
+    }
+    &__slogan {
+      font-weight: $font-weight-bold;
+    }
+    &__desc {
+      padding-left: 0;
+    }
+    &__list {
+      padding: 0 10rem 0 20rem;
+    }
+    &__item {
+      > h3 {
+        background: none;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

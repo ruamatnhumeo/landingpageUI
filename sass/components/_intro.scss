@@ -1,0 +1,49 @@
+.intro {
+  background-image: url("../images/bg-simplify-section-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &__diagrams {
+    > img {
+      opacity: 0.9;
+      width: 32.5rem;
+    }
+  }
+
+  &__content {
+    line-height: 2rem;
+  }
+
+  &__slogan {
+    padding: 0 2rem;
+    @include slogan(32px, 4rem);
+  }
+
+  &__desc {
+    @extend %desc;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background: none;
+    padding-top: 18rem;
+    &__diagrams {
+      order: 2;
+
+      > img {
+        width: 52rem;
+      }
+    }
+    &__content {
+      text-align: left;
+      padding-top: 5rem;
+    }
+    &__slogan {
+      padding: 0;
+      @include slogan(52px, 6rem);
+      font-weight: $font-weight-bold;
+    }
+    &__desc {
+      padding: 4.3rem 24rem 4.9rem 0;
+    }
+  }
+}

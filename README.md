@@ -1,4 +1,4 @@
-#Manage landing page - Responsive
+### Manage landing page - Responsive
 
 ![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)
 
